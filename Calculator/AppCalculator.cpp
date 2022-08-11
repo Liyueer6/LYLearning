@@ -95,15 +95,21 @@ int main() {
 
             break;
         }
-
         default:
+        {
             cout << "结束运行" << endl;
             result = false;
             break;
         }
+        }
 
-        cout << pGF->GetName() << "的面积是：" << pGF->GetArea() << endl;
-        cout << pGF->GetName() << "的周长是：" << pGF->GetPerimeter() << endl;
+        if (result)
+        {
+            cout << pGF->GetName() << "的面积是：" << pGF->GetArea() << endl;
+            cout << pGF->GetName() << "的周长是：" << pGF->GetPerimeter() << endl;
+            cout << endl;
+        }
+
     } while (result);
 
     delete pGF;
